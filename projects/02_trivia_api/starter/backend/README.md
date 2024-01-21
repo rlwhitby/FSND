@@ -24,8 +24,11 @@ This will install all of the required packages we selected within the `requireme
 
 ### Database Setup
 With Postgres running, restore a database using the trivia.psql file provided. From the backend folder in terminal run:
+**NOTE:** run the second command instead when working in a WSL Postgres database - make sure that the trivia database has been created first.
 ```bash
 psql trivia < trivia.psql
+
+psql -U dev -h 127.0.0.1 trivia < trivia.psql
 ```
 
 ### Running the server
