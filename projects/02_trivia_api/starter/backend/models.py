@@ -4,6 +4,10 @@ from flask_sqlalchemy import SQLAlchemy
 import json
 
 database_name = "trivia"
+# default database_path
+#database_path = "postgres://{}/{}".format('localhost:5432', database_name)
+        
+# NEW: use this database_path when working in a WSL Postgres database
 database_path = "postgres://{}:{}@{}/{}".format('dev', 'devpassword','127.0.0.1:5432', database_name)
 
 db = SQLAlchemy()
